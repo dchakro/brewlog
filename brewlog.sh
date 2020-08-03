@@ -59,29 +59,36 @@ if [ ! -f "$LOGFILE" ] ; then
 	touch "$LOGFILE"
 fi
 
-if [ $# -eq 0 ]; then
+if [ "$#" -eq 0 ]; then
     HELP
+    exit 0;
 fi
 
 if [ "$1" == "--help" ]; then
 	HELP
+	exit 0;
 elif [ "$1" == "--brew-help" ]; then
 	brew help
+	exit 0;
 elif [ "$1" == "version" ]; then
 	VERSION
+	exit 0;
 elif [ "$1" == "tail" ]; then
 	if [ "$2" == "-n" ]; then
 	   # tail with specified number of lines
 	   tail -n "$3" "$LOGFILE"
+	   exit 0;
 	else
 	   # tail with 15 lines (default -n for tail is 10, I wanted more)
 	   tail -n 15 "$LOGFILE"
+	   exit 0;
 	fi
 elif [ "$1" == "archive" ]; then
 	if [ -f "$LOGFILE" ] ; then
 		# Archiving logfile i.e. brew.log is removed (will be created on next run)
 		xz -vf $LOGFILE
 		mv "${LOGFILE}.xz" "$LOGFILE-$(date +'%Y%m%d').xz"
+		exit 0;
 	else
 		echo "$LOGFILE doesn't exist"
 		exit 1
@@ -90,4 +97,5 @@ else
    echo "brew $* :: $(date)" | tee -a "$LOGFILE"
    # logs both STDOUT and STDERR to $LOGFILE
    $(which brew) "$@" 2>&1 | tee -a "$LOGFILE"
+   exit 0;
 fi
