@@ -21,14 +21,13 @@ Usage:
    brewlog [brew command] [arguments to homebrew]
 e.g.
    brewlog install ffmpeg, invokes "brew install ffmpeg" and writes output to a log file.
-     
-   --help             Show help
-   --brew-help        show brew commands (alias to "brew help")
-    
-OPTIONS:
-    version            Show brewlog version
-    archive            Archives the current log file as .xz
-    tail [-n INT]      Show the last "INT" lines from the log file.
+
+OPTIONS:     
+    --help         Show help
+    --brew-help    Show brew commands (alias to "brew help")
+    version        Show brewlog version info
+    archive        Archives the current log file as .xz
+    tail [-n INT]       Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
    
 Homebrew/Linuxbrew Function examples:
@@ -52,7 +51,6 @@ Follow the development: https://github.com/robocopAlpha/brewlog
 
 ';
 }
-VERSION
 
 if [ ! -f "$LOGFILE" ] ; then
 	# Creating brew.log
@@ -60,11 +58,16 @@ if [ ! -f "$LOGFILE" ] ; then
 	mkdir -p "$(dirname "$LOGFILE")"
 	touch "$LOGFILE"
 fi
+
+if [ $# -eq 0 ]; then
+    HELP
+fi
+
 if [ "$1" == "--help" ]; then
 	HELP
 elif [ "$1" == "--brew-help" ]; then
 	brew help
-elif [ "$1" == "--brew-help" ]; then
+elif [ "$1" == "version" ]; then
 	VERSION
 elif [ "$1" == "tail" ]; then
 	if [ "$2" == "-n" ]; then

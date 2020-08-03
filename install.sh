@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ -w /usr/local/bin ]; then
    curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/brewlog.sh' > /usr/local/bin/brewlog
    chmod +x /usr/local/bin/brewlog

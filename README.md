@@ -21,7 +21,7 @@ Now you'll be easily able to track the changes made by `brew upgrade`or `brew cl
 ### How to use
 
 ```sh
-curl -sSL 'install.sh' | bash
+curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install.sh' | bash
 
 # Show help
 brewlog --help
