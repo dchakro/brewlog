@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###########
-# author: robocopAlpha
+# author: Deepankar Chakroborty
 # https://github.com/robocopAlpha
 # Leave feedback: https://gist.github.com/robocopAlpha/3e9792b6e47c3648e725fb518a2dbf68
 #
@@ -48,7 +48,7 @@ printf 'brewlog v.0.1  -  brewlog allows you to run homebrew commands while
                   simultanously logging to a file
 
 Follow the development: https://github.com/robocopAlpha/brewlog
-
+Copyright 2020, Deepankar Chakroborty. All rights reserved.
 ';
 }
 
@@ -99,3 +99,5 @@ else
    $(which brew) "$@" 2>&1 | tee -a "$LOGFILE"
    exit 0;
 fi
+
+# Copyright 2020, Deepankar Chakroborty. All rights reserved.
