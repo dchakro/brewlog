@@ -33,26 +33,62 @@ Now you're easily able to track the changes made to your system while running `b
 
 ### How to use
 
+#### a) Install from binary
+
+1. Download the latest binary from the releases (should run on *nix with a homebrew installation).
+2. `mv brewlog /usr/local/bin/brewlog` or to some other place that is in your `$PATH`.
+3. Familiarize yourself by running `brewlog —help`.
+
+#### b) Install from source
+
+The script [`install.sh`](https://github.com/robocopAlpha/brewlog/blob/master/install.sh) automatically picks the place to install brewlog by detecting the location where the `brew` binary is placed in your system `$PATH`.
+
 ```sh
-# Review/Modify code
-curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install.sh'
 # Install
 curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install.sh' | bash
-
 # Show help
 brewlog --help
+```
 
-# Running homebrew commands
-brewlog install ffmpeg
-brewlog info ffmpeg
+#### c) Install from source with modifications
 
-# Even complex brew commands work with brewlog
-brewlog list --multiple --versions
+```sh
+# download
+curl -OJL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install.sh'
+# Review/Modify code
+bat install.sh
+nano install.sh
+# Install
+sh install.sh | bash
+# Show help
+brewlog --help
 ```
 
 
 
-### Detailed usage
+#### Examples using brewlog
+
+```sh
+# Running homebrew commands
+brewlog install ffmpeg
+brewlog info ffmpeg
+brewlog outdated
+
+# Tail the log file
+brewlog tail
+brewlog tail -n 5
+
+# archive the current log file
+brewlog archive
+
+# Even complex brew commands work with brewlog
+brewlog list --multiple --versions
+brew deps ffmpeg | xargs brewlog uninstall ----ignore-dependencies
+```
+
+
+
+### `brewlog —help` listing parameters and examples:
 
 ```
 brewlog - allows you to log your homebrew/linuxbrew operations to a file.
