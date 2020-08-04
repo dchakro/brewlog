@@ -8,7 +8,7 @@ else
     echo "Determined installation location: $BREWLOCATION/brewlog"
 fi
 
-if [ -w /usr/local/bin ]; then
+if [ -w $BREWLOCATION ]; then
    curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/brewlog.sh' > $BREWLOCATION/brewlog
    chmod +x $BREWLOCATION/brewlog
    printf "
