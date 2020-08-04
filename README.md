@@ -35,7 +35,7 @@ Now you're easily able to track the changes made to your system while running `b
 
 #### a) Install from binary
 
-1. Download the latest binary from the releases (should run on *nix with a homebrew installation).
+1. Download the binary from the [latest release](https://github.com/robocopAlpha/brewlog/releases/latest) (should run on *nix with a homebrew installation).
 2. `mv brewlog /usr/local/bin/brewlog` or to some other place that is in your `$PATH`.
 3. Familiarize yourself by running `brewlog —help`.
 
