@@ -1,16 +1,19 @@
 #!/bin/bash
 BREWLOCATION=$(command -v brew)
-echo "$BREWLOCATION/brewlog"
 if [ "$?" -ne "0" ]; then
     echo "Homebrew/Linux brew installation not detected in your PATH."
     exit 1
 else
-    BREWLOCATION= $(dirname "$BREWLOCATION")
+    BREWLOCATION=$(dirname "$BREWLOCATION")
+    echo "Determined installation location: $BREWLOCATION/brewlog"
 fi
 
 if [ -w /usr/local/bin ]; then
    curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/brewlog.sh' > $BREWLOCATION/brewlog
    chmod +x $BREWLOCATION/brewlog
+   printf "
+brewlog has been installed as $(command -v brewlog). 
+You can start with brewlog --help %s\n"
 else
   curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/brewlog.sh' >| brewlog.sh
   echo "user $(whoami) cannot write to $BREWLOCATION"
