@@ -1,3 +1,8 @@
+[![GitHub license](https://img.shields.io/github/license/robocopAlpha/brewlog)](https://github.com/robocopAlpha/brewlog/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/robocopAlpha/brewlog)](https://github.com/robocopAlpha/brewlog/issues)
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/robocopAlpha/brewlog/master.svg)](https://github.com/robocopAlpha/brewlog/branches)
+[![Bash](https://img.shields.io/badge/Made%20with-Bash-blueviolet)](https://www.gnu.org/software/bash/)
+
 # brewlog
 
 ### Why?
