@@ -102,7 +102,7 @@ e.g.
 
 OPTIONS:
     version            Show brewlog version
-    archive            Archives the current log file as .xz
+    archive            Archives the current log file as .xz (gzip as fallback if xz not found)
     tail [-n INT]      Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
 
@@ -116,7 +116,9 @@ Homebrew/Linuxbrew Function examples:
      Find out more homebrew commands by running "brew --help".
 ```
 
+If you found `brewlog` consider starring this repo.
 
+[![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/robocopAlpha) 
 
 ### Notice about the command `brew log`:
 
