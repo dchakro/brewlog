@@ -44,7 +44,7 @@ Homebrew/Linuxbrew Function examples:
 
 VERSION()
 {
-printf 'brewlog v.0.1  -  brewlog allows you to run homebrew commands while 
+printf 'brewlog v.0.2  -  brewlog allows you to run homebrew commands while 
                   simultanously logging to a file
 
 Follow the development: https://github.com/robocopAlpha/brewlog
