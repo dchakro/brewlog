@@ -26,7 +26,7 @@ OPTIONS:
     --help         Show help
     --brew-help    Show brew commands (alias to "brew help")
     version        Show brewlog version info
-    archive        Archives the current log file as .xz
+    archive        Archives the current log file as .xz (gzip as fallback if xz not found)
     tail [-n INT]       Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
    
@@ -86,9 +86,17 @@ elif [ "$1" == "tail" ]; then
 elif [ "$1" == "archive" ]; then
 	if [ -f "$LOGFILE" ] ; then
 		# Archiving logfile i.e. brew.log is removed (will be created on next run)
-		xz -vf $LOGFILE
-		mv "${LOGFILE}.xz" "$LOGFILE-$(date +'%Y%m%d').xz"
-		exit 0;
+		command -v xz > /dev/null
+		if [ "$?" -eq "0" ]; then
+		    xz -6vf $LOGFILE
+		    mv "${LOGFILE}.xz" "$LOGFILE-$(date +'%Y%m%d').xz"
+		    exit 0;
+		else
+		    # if xz is unavailable use gz
+			gzip -6fv $LOGFILE
+			mv "${LOGFILE}.gz" "$LOGFILE-$(date +'%Y%m%d').gz"
+		    exit 0;
+        fi
 	else
 		echo "$LOGFILE doesn't exist"
 		exit 1
