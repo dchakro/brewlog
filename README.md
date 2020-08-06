@@ -116,7 +116,7 @@ Homebrew/Linuxbrew Function examples:
      Find out more homebrew commands by running "brew --help".
 ```
 
-If you found `brewlog` consider starring this repo.
+If you found `brewlog` useful consider adding a star ‘✩' to this repo.
 
 [![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/robocopAlpha) 
 
