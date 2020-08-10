@@ -21,7 +21,7 @@ I wrote [ `brewlog`](https://github.com/robocopAlpha/brewlog/) to patch a minor 
 
 `brewlog` is simple solution that can:
 
-+ `log` homebrew/linuxbrew activity (`STDOUT` and `STDERR`) to a logfile (default: `~/Logs/brew.log`)
++ `log` [`brew`](https://brew.sh/) activity (`STDOUT` and `STDERR`) to a logfile (default: `~/Logs/brew.log`)
   + because brewlog is a a new command (and not an alias), the user still retains the freedom to run `brew [command] [formula]` in case they do not want to log some brew activity.
 + `tail` the `brew.log` file to display selected number of lines.
 + `archive` the brew.log file (user has to explicitly invoke this command to archive).
@@ -35,7 +35,7 @@ Now you're easily able to track the changes made to your system while running `b
 
 #### a) Install from binary
 
-1. Download the binary from the [latest release](https://github.com/robocopAlpha/brewlog/releases/latest) (should run on *nix with a homebrew installation).
+1. Download the binary from the [latest release](https://github.com/robocopAlpha/brewlog/releases/latest) (should run on *nix with a [homebrew](https://brew.sh/) installation).
 2. `mv brewlog /usr/local/bin/brewlog` or to some other place that is in your `$PATH`.
 3. Familiarize yourself by running `brewlog —help`.
 

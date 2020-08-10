@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 BREWLOCATION=$(command -v brew)
 if [ "$?" -ne "0" ]; then
     echo "Homebrew/Linux brew installation not detected in your PATH."
