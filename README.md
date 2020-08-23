@@ -33,13 +33,7 @@ Now you're easily able to track the changes made to your system while running `b
 
 ### How to use
 
-#### a) Install from binary
-
-1. Download the binary from the [latest release](https://github.com/robocopAlpha/brewlog/releases/latest) (should run on *nix with a [homebrew](https://brew.sh/) installation).
-2. `mv brewlog /usr/local/bin/brewlog` or to some other place that is in your `$PATH`.
-3. Familiarize yourself by running `brewlog —help`.
-
-#### b) Install from source
+#### a) Install from source
 
 The script [`install.sh`](https://github.com/robocopAlpha/brewlog/blob/master/install.sh) automatically picks the place to install brewlog by detecting the location where the `brew` binary is placed in your system `$PATH`.
 
@@ -49,6 +43,12 @@ curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install
 # Show help
 brewlog --help
 ```
+
+#### b) Install from binary
+
+1. Download the binary from the [latest release](https://github.com/robocopAlpha/brewlog/releases/latest) (should run on *nix with a [homebrew](https://brew.sh/) installation).
+2. `mv brewlog /usr/local/bin/brewlog` or to some other place that is in your `$PATH`.
+3. Familiarize yourself by running `brewlog —help`.
 
 #### c) Install from source with modifications
 
