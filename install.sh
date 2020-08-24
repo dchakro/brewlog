@@ -9,7 +9,7 @@ else
 fi
 
 if [ -w $BREWLOCATION ]; then
-   curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/brewlog.sh' > $BREWLOCATION/brewlog
+   curl -sSL 'https://raw.githubusercontent.com/dchakro/brewlog/master/brewlog.sh' > $BREWLOCATION/brewlog
    chmod +x $BREWLOCATION/brewlog
    printf "
 brewlog has been installed as $(command -v brewlog). 
@@ -20,7 +20,7 @@ else
     shopt -s nocasematch
     flag=1
   fi
-  curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/brewlog.sh' >| brewlog.sh
+  curl -sSL 'https://raw.githubusercontent.com/dchakro/brewlog/master/brewlog.sh' >| brewlog.sh
   echo "user $(whoami) cannot write to $BREWLOCATION"
   read -r -p "use sudo (y/N): " choice
   if [[ "$choice" =~ ^(yes|y)$ ]]

@@ -1,6 +1,6 @@
-[![GitHub license](https://img.shields.io/github/license/robocopAlpha/brewlog)](https://github.com/dchakro/brewlog/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/robocopAlpha/brewlog)](https://github.com/dchakro/brewlog/issues)
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/robocopAlpha/brewlog/master.svg)](https://github.com/dchakro/brewlog/branches)
+[![GitHub license](https://img.shields.io/github/license/dchakro/brewlog)](https://github.com/dchakro/brewlog/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/dchakro/brewlog)](https://github.com/dchakro/brewlog/issues)
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/dchakro/brewlog/master.svg)](https://github.com/dchakro/brewlog/branches)
 [![Bash](https://img.shields.io/badge/Made%20with-Bash-blueviolet)](https://www.gnu.org/software/bash/)
 
 # brewlog
@@ -39,7 +39,7 @@ The script [`install.sh`](https://github.com/dchakro/brewlog/blob/master/install
 
 ```sh
 # Install
-curl -sSL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install.sh' | bash
+curl -sSL 'https://raw.githubusercontent.com/dchakro/brewlog/master/install.sh' | bash
 # Show help
 brewlog --help
 ```
@@ -54,7 +54,7 @@ brewlog --help
 
 ```sh
 # download
-curl -OJL 'https://raw.githubusercontent.com/robocopAlpha/brewlog/master/install.sh'
+curl -OJL 'https://raw.githubusercontent.com/dchakro/brewlog/master/install.sh'
 # Review/Modify code
 bat install.sh
 nano install.sh
