@@ -47,7 +47,7 @@ VERSION()
 printf 'brewlog v.0.2  -  brewlog allows you to run homebrew commands while 
                   simultanously logging to a file
 
-Follow the development: https://github.com/robocopAlpha/brewlog
+Follow the development: https://github.com/dchakro/brewlog
 Copyright 2020, Deepankar Chakroborty. All rights reserved.
 ';
 }

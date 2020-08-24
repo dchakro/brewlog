@@ -1,13 +1,13 @@
-[![GitHub license](https://img.shields.io/github/license/robocopAlpha/brewlog)](https://github.com/robocopAlpha/brewlog/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/robocopAlpha/brewlog)](https://github.com/robocopAlpha/brewlog/issues)
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/robocopAlpha/brewlog/master.svg)](https://github.com/robocopAlpha/brewlog/branches)
+[![GitHub license](https://img.shields.io/github/license/robocopAlpha/brewlog)](https://github.com/dchakro/brewlog/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/robocopAlpha/brewlog)](https://github.com/dchakro/brewlog/issues)
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/robocopAlpha/brewlog/master.svg)](https://github.com/dchakro/brewlog/branches)
 [![Bash](https://img.shields.io/badge/Made%20with-Bash-blueviolet)](https://www.gnu.org/software/bash/)
 
 # brewlog
 
 ### Why?
 
-I wrote [ `brewlog`](https://github.com/robocopAlpha/brewlog/) to patch a minor but IMHO a significant shortcoming I feel [homebrew](https://brew.sh/) has had for very long time. It is the ability to log what homebrew does. IMO it doesn’t have to be something very sophisticated i.e. integration with system-log, etc.. So, I worked on a basic idea I got from [this particular issue](https://github.com/Homebrew/legacy-homebrew/issues/10430) and developed `brewlog`. 
+I wrote [ `brewlog`](https://github.com/dchakro/brewlog/) to patch a minor but IMHO a significant shortcoming I feel [homebrew](https://brew.sh/) has had for very long time. It is the ability to log what homebrew does. IMO it doesn’t have to be something very sophisticated i.e. integration with system-log, etc.. So, I worked on a basic idea I got from [this particular issue](https://github.com/Homebrew/legacy-homebrew/issues/10430) and developed `brewlog`. 
 
 
 
@@ -35,7 +35,7 @@ Now you're easily able to track the changes made to your system while running `b
 
 #### a) Install from source
 
-The script [`install.sh`](https://github.com/robocopAlpha/brewlog/blob/master/install.sh) automatically picks the place to install brewlog by detecting the location where the `brew` binary is placed in your system `$PATH`.
+The script [`install.sh`](https://github.com/dchakro/brewlog/blob/master/install.sh) automatically picks the place to install brewlog by detecting the location where the `brew` binary is placed in your system `$PATH`.
 
 ```sh
 # Install
@@ -46,7 +46,7 @@ brewlog --help
 
 #### b) Install from binary
 
-1. Download the binary from the [latest release](https://github.com/robocopAlpha/brewlog/releases/latest) (should run on *nix with a [homebrew](https://brew.sh/) installation).
+1. Download the binary from the [latest release](https://github.com/dchakro/brewlog/releases/latest) (should run on *nix with a [homebrew](https://brew.sh/) installation).
 2. `mv brewlog /usr/local/bin/brewlog` or to some other place that is in your `$PATH`.
 3. Familiarize yourself by running `brewlog —help`.
 
