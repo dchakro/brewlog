@@ -2,8 +2,8 @@
 
 ###########
 # author: Deepankar Chakroborty
-# https://github.com/robocopAlpha
-# Leave feedback: https://gist.github.com/robocopAlpha/3e9792b6e47c3648e725fb518a2dbf68
+# https://github.com/dchakro
+# Leave feedback: https://github.com/dchakro/brewlog
 #
 # Software provided as is without warranty.
 ###########
