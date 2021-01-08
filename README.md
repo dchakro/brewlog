@@ -7,13 +7,13 @@
 
 ### Why?
 
-I wrote [ `brewlog`](https://github.com/dchakro/brewlog/) to patch a minor but IMHO a significant shortcoming I feel [homebrew](https://brew.sh/) has had for very long time. It is the ability to log what homebrew does. IMO it doesn’t have to be something very sophisticated i.e. integration with system-log, etc.. So, I worked on a basic idea I got from [this particular issue](https://github.com/Homebrew/legacy-homebrew/issues/10430) and developed `brewlog`. 
+I wrote [ `brewlog`](https://github.com/dchakro/brewlog/) to patch a minor but IMHO a significant shortcoming I feel [homebrew](https://brew.sh/) has had for a very long time; and that is the ability to log what homebrew does, more specifically maintail a log of user-executed `brew` activity. IMO it didn't have to be something very sophisticated i.e. integration with system-log, etc.. So, I worked on an idea I found about from [this particular issue](https://github.com/Homebrew/legacy-homebrew/issues/10430) and developed `brewlog`. 
 
 
 
 ### Why bother with a log file, when brew is so stable?
 
-`brew` is generally very stable, but occasionally it breaks compatibility when it is upgrading some packages and removes some “obsolete” versions. Generally this is fine, but in certain cases the user wants to retain those packages for compatibility with something else. I recently faced [a problem](https://github.com/brewsci/homebrew-base/issues/29) due to this. While `brewlog` can’t prevent something like this from happening, but it logs `brew` activity so it is much easier to troubleshoot (by identifying what package(s) were added/removed).
+Yes, `brew` is generally very stable, but occasionally it breaks compatibility when it is upgrading some packages and removes some “obsolete” versions. Generally this is fine, but in certain cases the user wants to retain those packages for compatibility with something else. I recently faced [a problem](https://github.com/brewsci/homebrew-base/issues/29) due to this. While `brewlog` can’t prevent something like this from happening, but it logs `brew` activity so it is much easier to troubleshoot (by identifying what package(s) were added/removed).
 
 
 
