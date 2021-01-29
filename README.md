@@ -7,7 +7,7 @@
 
 ### Why?
 
-I wrote [ `brewlog`](https://github.com/dchakro/brewlog/) to patch a minor but IMHO a significant shortcoming I feel [homebrew](https://brew.sh/) has had for a very long time; and that is the ability to log what homebrew does, more specifically maintail a log of user-executed `brew` activity. IMO it didn't have to be something very sophisticated i.e. integration with system-log, etc.. So, I worked on an idea I found about from [this particular issue](https://github.com/Homebrew/legacy-homebrew/issues/10430) and developed `brewlog`. 
+I wrote [ `brewlog`](https://github.com/dchakro/brewlog/) to patch a minor but IMHO a significant shortcoming I feel [homebrew](https://brew.sh/) has had for a very long time; and that is the ability to log what homebrew does, more specifically maintain a log of user-executed `brew` activity. IMO it didn't have to be something very sophisticated i.e. integration with system-log, etc.. So, I worked on an idea I found about from [this particular issue](https://github.com/Homebrew/legacy-homebrew/issues/10430) and developed `brewlog`. 
 
 
 
