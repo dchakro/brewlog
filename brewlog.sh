@@ -27,6 +27,7 @@ OPTIONS:
     --brew-help    Show brew commands (alias to "brew help")
     version        Show brewlog version info
     archive        Archives the current log file as .xz (gzip as fallback if xz not found)
+	search [TERM]       Searches for TERM in the logfile. (Uses grep)
     tail [-n INT]       Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
    
@@ -83,6 +84,9 @@ elif [ "$1" == "tail" ]; then
 	   tail -n 15 "$LOGFILE"
 	   exit 0;
 	fi
+elif [ "$1" == "find" ]; then
+	# Listing all appearances of search term in the log file.
+	cat "$LOGFILE" | egrep "$2"
 elif [ "$1" == "archive" ]; then
 	if [ -f "$LOGFILE" ] ; then
 		# Archiving logfile i.e. brew.log is removed (will be created on next run)
