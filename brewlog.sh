@@ -27,7 +27,7 @@ OPTIONS:
     --brew-help    Show brew commands (alias to "brew help")
     version        Show brewlog version info
     archive        Archives the current log file as .xz (gzip as fallback if xz not found)
-	search [TERM]       Searches for TERM in the logfile. (Uses grep)
+	find [TERM]       grep the TERM in the logfile.
     tail [-n INT]       Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
    
