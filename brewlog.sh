@@ -32,11 +32,12 @@ OPTIONS:
                                   (default: last 15 lines)
    
 Homebrew/Linuxbrew Function examples:
-  brewlog install [formula]     Install formula
-  brewlog uninstall [formula]   Uninstall formula
-  brewlog deps [formula]        Show dependencies for formula
-  brewlog outdated              Show outdated formulae
-  brewlog upgrade [formula]     Upgrade all (or entered) brew formula
+  brewlog install [formula]     	Install formula
+  brewlog uninstall [formula]   	Uninstall formula
+  brewlog deps [formula]        	Show dependencies for [formula]
+  brewlog uses --installed [formula]   Show items listing [formula] as a dependency
+  brewlog outdated              	Show outdated formulae
+  brewlog upgrade [formula]     	Upgrade all (or entered) brew formula
   ... ... ...
      Find out more homebrew commands by running "brew --help".
 ';
