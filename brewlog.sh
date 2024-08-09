@@ -27,17 +27,17 @@ OPTIONS:
     --brew-help    Show brew commands (alias to "brew help")
     version        Show brewlog version info
     archive        Archives the current log file as .xz (gzip as fallback if xz not found)
-	find [TERM]	   grep the TERM in the logfile.
+    find [TERM]	   grep the TERM in the logfile.
     tail [-n INT]  Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
    
 Homebrew/Linuxbrew Function examples:
-  brewlog install [formula]     	Install formula
-  brewlog uninstall [formula]   	Uninstall formula
-  brewlog deps [formula]        	Show dependencies for [formula]
-  brewlog uses --installed [formula]   Show items listing [formula] as a dependency
-  brewlog outdated              	Show outdated formulae
-  brewlog upgrade [formula]     	Upgrade all (or entered) brew formula
+  brewlog install [formula]     		Install formula
+  brewlog uninstall [formula]   		Uninstall formula
+  brewlog deps [formula]        		Show dependencies for [formula]
+  brewlog uses --installed [formula]    Show items listing [formula] as a dependency
+  brewlog outdated              		Show outdated formulae
+  brewlog upgrade [formula]     		Upgrade all (or entered) brew formula
   ... ... ...
      Find out more homebrew commands by running "brew --help".
 ';
