@@ -84,6 +84,10 @@ brewlog archive
 # Even complex brew commands work with brewlog
 brewlog list --multiple --versions
 brew deps ffmpeg | xargs brewlog uninstall ----ignore-dependencies
+
+# Writing package and cask dependency tree
+brewlog tree                                                                                  
+package and cask dependency tree updated. Find it here: ~/Logs/brew_tree.txt
 ```
 
 
@@ -97,21 +101,23 @@ Usage:
 e.g.
    brewlog install ffmpeg, invokes "brew install ffmpeg" and writes output to a log file.
 
-   --help             Show help
-   --brew-help        show brew commands (alias to "brew help")
-
 OPTIONS:
-    version            Show brewlog version
-    archive            Archives the current log file as .xz (gzip as fallback if xz not found)
-    tail [-n INT]      Show the last "INT" lines from the log file.
+    --help         Show help
+    --brew-help    Show brew commands (alias to "brew help")
+    version        Show brewlog version info
+    tree           Write the dependency tree of all installed packages & casks to a file
+    archive        Archives the current log file as .xz (gzip as fallback if xz not found)
+    find [TERM]	   grep the TERM in the logfile.
+    tail [-n INT]  Show the last "INT" lines from the log file.
                                   (default: last 15 lines)
 
 Homebrew/Linuxbrew Function examples:
-  brewlog install [formula]     Install formula
-  brewlog uninstall [formula]   Uninstall formula
-  brewlog deps [formula]        Show dependencies for formula
-  brewlog outdated              Show outdated formulae
-  brewlog upgrade [formula]     Upgrade all (or entered) brew formula
+  brewlog install [formula]     		Install formula
+  brewlog uninstall [formula]   		Uninstall formula
+  brewlog deps [formula]        		Show dependencies for [formula]
+  brewlog uses --installed [formula]    Show items listing [formula] as a dependency
+  brewlog outdated              		Show outdated formulae
+  brewlog upgrade [formula]     		Upgrade all (or entered) brew formula
   ... ... ...
      Find out more homebrew commands by running "brew --help".
 ```
