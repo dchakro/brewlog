@@ -26,6 +26,7 @@ OPTIONS:
     --help         Show help
     --brew-help    Show brew commands (alias to "brew help")
     version        Show brewlog version info
+    tree           Write the dependency tree of all installed packages & casks to a file
     archive        Archives the current log file as .xz (gzip as fallback if xz not found)
     find [TERM]	   grep the TERM in the logfile.
     tail [-n INT]  Show the last "INT" lines from the log file.
@@ -74,6 +75,10 @@ elif [ "$1" == "--brew-help" ]; then
 	exit 0;
 elif [ "$1" == "version" ]; then
 	VERSION
+	exit 0;
+elif [ "$1" == "tree" ]; then
+	brew deps --tree --installed >> $HOME/Logs/brew_tree.txt
+	echo "package and cask dependency tree updated. Find it here: ~/Logs/brew_tree.txt"
 	exit 0;
 elif [ "$1" == "tail" ]; then
 	if [ "$2" == "-n" ]; then
