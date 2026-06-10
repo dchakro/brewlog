@@ -113,9 +113,22 @@ elif [ "$1" == "archive" ]; then
 	fi
 else
    echo "brew $* :: $(date)" | tee -a "$LOGFILE"
-   # logs both STDOUT and STDERR to $LOGFILE
-   $(which brew) "$@" 2>&1 | tee -a "$LOGFILE"
-   exit 0;
+   # Run brew with a real controlling terminal via script(1) so that
+   # interactive y/n / password prompts work, while capturing the session.
+   # The raw typescript is post-processed with ansifilter to strip the
+   # terminal escape codes before appending to $LOGFILE.
+   TMPLOG="$(mktemp "${TMPDIR:-/tmp}/brewlog.XXXXXX")"
+   script -q -e "$TMPLOG" "$(which brew)" "$@"
+   STATUS=$?
+   # Drop script's own "Script started/done" banner lines, collapse the
+   # carriage returns/backspaces (col -b), strip ANSI codes (ansifilter)
+   # and remove the stray EOT (^D) before appending to $LOGFILE.
+   # LC_ALL=C makes tr operate on raw bytes; otherwise BSD tr aborts with
+   # "Illegal byte sequence" on multibyte/control characters in the session.
+   grep -av -e '^Script started on ' -e '^Script done on ' "$TMPLOG" \
+     | col -b | ansifilter | LC_ALL=C tr -d '\004' >> "$LOGFILE"
+   rm -f "$TMPLOG"
+   exit $STATUS;
 fi
 
 # Copyright 2020, Deepankar Chakroborty. All rights reserved.
