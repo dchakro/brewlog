@@ -31,6 +31,18 @@ Now you're easily able to track the changes made to your system while running `b
 
 
 
+### Dependencies
+
+`brewlog` runs `brew` through `script(1)` so interactive prompts (y/n confirmations, password prompts) keep working, and post-processes the captured session before writing it to the log file. This requires [`ansifilter`](https://gitlab.com/saalen/ansifilter) to strip terminal escape codes:
+
+```sh
+brew install ansifilter
+```
+
+`script`, `col` and `tr` are part of the base system on macOS/Linux and need no installation.
+
+
+
 ### How to use
 
 #### a) Install from source
