@@ -123,8 +123,10 @@ else
    # Drop script's own "Script started/done" banner lines, collapse the
    # carriage returns/backspaces (col -b), strip ANSI codes (ansifilter)
    # and remove the stray EOT (^D) before appending to $LOGFILE.
+   # LC_ALL=C makes tr operate on raw bytes; otherwise BSD tr aborts with
+   # "Illegal byte sequence" on multibyte/control characters in the session.
    grep -av -e '^Script started on ' -e '^Script done on ' "$TMPLOG" \
-     | col -b | ansifilter | tr -d '\004' >> "$LOGFILE"
+     | col -b | ansifilter | LC_ALL=C tr -d '\004' >> "$LOGFILE"
    rm -f "$TMPLOG"
    exit $STATUS;
 fi
